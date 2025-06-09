@@ -20,16 +20,13 @@ def get_state():
     state = [traci.lane.getLastStepVehicleNumber(lane) for lane in LANES]
     return torch.tensor(state, dtype=torch.float32).to(device)
 
-def compute_reward(state):
-    # Phần thưởng dựa trên độ lệch chuẩn và thời gian chờ
-    std = torch.std(torch.tensor(state, device=device)).item()
-    waiting_times = [sum(traci.vehicle.getWaitingTime(vehicle) for vehicle in traci.lane.getLastStepVehicleIDs(lane)) for lane in LANES]
-    total_waiting = sum(waiting_times)
-    if std < 2.0 and total_waiting < 100:
-        return 1.0 - (std / 2.0) - (total_waiting / 100.0)
-    else:
-        penalty = -1.0 * ((std - 2.0) / 8.0) - (total_waiting / 50.0)
-        return max(penalty, -10.0)
+def compute_reward(state, previous_action=None, current_action=None, phase_duration=0):
+    std = torch.std(state).item()
+    if std < 0.1:
+        r = 1 - (std / 0.1)
+    elif std >= 0.1:
+        r = -1 * (std - 0.1) / 0.4
+    return max(min(r, 1), -1)
 
 def set_phase(action):
     if action == 0:
