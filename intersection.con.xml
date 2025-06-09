@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/connections_file.xsd">
+    <!-- North_in: Straight to south_out, Right to east_out -->
+    <connection from="north_in" to="south_out" fromLane="0" toLane="0"/>
+    <connection from="north_in" to="west_out" fromLane="0" toLane="0"/>
+    <!-- South_in: Straight to north_out, Right to west_out -->
+    <connection from="south_in" to="north_out" fromLane="0" toLane="0"/>
+    <connection from="south_in" to="east_out" fromLane="0" toLane="0"/>
+    <!-- East_in: Straight to west_out, Right to south_out -->
+    <connection from="east_in" to="west_out" fromLane="0" toLane="0"/>
+    <connection from="east_in" to="north_out" fromLane="0" toLane="0"/>
+    <!-- West_in: Straight to east_out, Right to north_out -->
+    <connection from="west_in" to="east_out" fromLane="0" toLane="0"/>
+    <connection from="west_in" to="south_out" fromLane="0" toLane="0"/>
+</connections>

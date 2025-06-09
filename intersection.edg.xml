@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edges xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/edges_file.xsd">
+    <edge id="north_in" from="node_out_north" to="center" priority="78" numLanes="1" speed="13.89" length="100.0">
+        <lane index="0" allow="passenger" speed="13.89"/>
+    </edge>
+    <edge id="north_out" from="center" to="node_out_north" priority="78" numLanes="1" speed="13.89" length="100.0">
+        <lane index="0" allow="passenger" speed="13.89"/>
+    </edge>
+    <edge id="south_in" from="node_out_south" to="center" priority="78" numLanes="1" speed="13.89" length="100.0">
+        <lane index="0" allow="passenger" speed="13.89"/>
+    </edge>
+    <edge id="south_out" from="center" to="node_out_south" priority="78" numLanes="1" speed="13.89" length="100.0">
+        <lane index="0" allow="passenger" speed="13.89"/>
+    </edge>
+    <edge id="east_in" from="node_out_east" to="center" priority="78" numLanes="1" speed="13.89" length="100.0">
+        <lane index="0" allow="passenger" speed="13.89"/>
+    </edge>
+    <edge id="east_out" from="center" to="node_out_east" priority="78" numLanes="1" speed="13.89" length="100.0">
+        <lane index="0" allow="passenger" speed="13.89"/>
+    </edge>
+    <edge id="west_in" from="node_out_west" to="center" priority="78" numLanes="1" speed="13.89" length="100.0">
+        <lane index="0" allow="passenger" speed="13.89"/>
+    </edge>
+    <edge id="west_out" from="center" to="node_out_west" priority="78" numLanes="1" speed="13.89" length="100.0">
+        <lane index="0" allow="passenger" speed="13.89"/>
+    </edge>
+</edges>
